@@ -90,7 +90,6 @@ func TestSaveHandler(t *testing.T) {
 
 			require.Equal(t, tc.respError, resp.Error)
 
-			// TODO: add more checks
 		})
 	}
 }
