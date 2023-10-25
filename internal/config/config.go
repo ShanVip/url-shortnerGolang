@@ -24,12 +24,12 @@ func MustLoad() *Config {
 	if err != nil {
 		log.Fatal("CONFIG_PATH is not set")
 	}
+
 	configPath := os.Getenv("PROD")
 	if configPath == "" {
 		log.Fatal("CONFIG_PATH is not get")
 	}
 
-	// check if file exists
 	if _, err := os.Stat(configPath); os.IsNotExist(err) {
 		log.Fatalf("config file does not exist: %s", configPath)
 	}
